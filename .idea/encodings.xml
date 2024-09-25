@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/DataFeed/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/DataFeed/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Item/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Item/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Order/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Other/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Other/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RMA/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RMA/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Report/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Report/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SBN/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SBN/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SDK-ALL/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SDK-ALL/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Seller/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Seller/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Shipping/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Shipping/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

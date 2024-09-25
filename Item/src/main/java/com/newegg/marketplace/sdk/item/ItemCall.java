@@ -317,4 +317,7 @@ public class ItemCall {
 			return itemCBCaller.updateInventoryAndPrice(body);
 		else throw new PlatformException(PLATFORM.USA.name());	
 	}
+
+	public static void main(String[] args) { {System.out.println("MainClass");} }
+
 }

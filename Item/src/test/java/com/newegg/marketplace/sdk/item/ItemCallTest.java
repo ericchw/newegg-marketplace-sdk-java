@@ -33,14 +33,14 @@ public class ItemCallTest {
 
 	@Rule
 	public ExpectedException thrown = ExpectedException.none();
-	
+
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception{
-		APIConfig.load(ItemConfig.class);	
+		APIConfig.load(ItemConfig.class);
 	}
-	
+
 	@Test
-	public void testRetry() throws feign.RetryableException {	
+	public void testRetry() throws feign.RetryableException {
 		String tmp=Content.HostURL;
 		Content.HostURL="https://xxx.newegg.xbh/marketplace";
 		ItemCall call=new ItemCall();
@@ -49,12 +49,12 @@ public class ItemCallTest {
 		obj.setOperationType("GetVolumeDiscountRequest");
 		GetVolumeDiscountRequestResultRequest.RequestBody body=new GetVolumeDiscountRequestResultRequest.RequestBody();
 		body.setNeweggItemNumber("9SIA0062TT3677");
-		obj.setRequestBody(body);	
+		obj.setRequestBody(body);
 		thrown.expect(feign.RetryableException.class);
-		call.getVolumeDiscountRequestResult(obj);		
-		
+		call.getVolumeDiscountRequestResult(obj);
+
 	}
-	
+
 	@Test
 	public void testGetVolumeDiscount() {
 		Variables.SimulationEnabled=true;
@@ -63,17 +63,17 @@ public class ItemCallTest {
 		request.setOperationType("GetVolumeDiscountRequest");
 		GetVolumeDiscountRequestResultRequest.RequestBody body=new GetVolumeDiscountRequestResultRequest.RequestBody();
 		body.setNeweggItemNumber("9SIA0062TT3677");
-		request.setRequestBody(body);		
-		GetVolumeDiscountRequestResultResponse r=call.getVolumeDiscountRequestResult(request);				
+		request.setRequestBody(body);
+		GetVolumeDiscountRequestResultResponse r=call.getVolumeDiscountRequestResult(request);
 		assertTrue("B0147001".equals(r.getResponseBody().getItemVolumeDiscountInfo().getSellerPartNumber()));
 		assertTrue(r.getIsSuccess());
 	}
 
-	
+
 	@Test
 	public void testSubmitVolumeDiscount() {
 		Variables.SimulationEnabled=true;
-		ItemCall call=new ItemCall();		
+		ItemCall call=new ItemCall();
 		SubmitVolumeDiscountRequest request=new SubmitVolumeDiscountRequest();
 		request.setOperationType("SubmitVolumeDiscountRequest");
 		SubmitVolumeDiscountRequest.RequestBody body=new SubmitVolumeDiscountRequest.RequestBody();
@@ -101,11 +101,11 @@ public class ItemCallTest {
 		Variables.SimulationEnabled=false;
 		assertTrue(r.isIsSuccess());
 	}
-	
+
 	@Test
 	public void testNoneUSAManufacturerLookupForInternationalCountry(){
 		boolean assertFlag=false;
-		Content.PLATFORM tmp=Content.Platform;		
+		Content.PLATFORM tmp=Content.Platform;
 		Content.Platform=Content.PLATFORM.CAN;
 		ItemCall call=new ItemCall();
 		ManufacturerLookupForInternationalCountryRequest request=new ManufacturerLookupForInternationalCountryRequest();
@@ -115,7 +115,7 @@ public class ItemCallTest {
 		}catch(PlatformException ex) {
 			assertFlag=true;
 		}
-		Content.Platform=tmp;	
+		Content.Platform=tmp;
 		assertTrue(assertFlag);
 	}
 	
@@ -139,7 +139,7 @@ public class ItemCallTest {
 		}
 		assertTrue(assertFlag);
 	}*/
-	
+
 	public void testErrorResponse_XML() {
 		ItemCall call=new ItemCall();
 		GetVolumeDiscountRequestResultRequest request=new GetVolumeDiscountRequestResultRequest();
@@ -149,7 +149,7 @@ public class ItemCallTest {
 		request.setRequestBody(body);
 		boolean assertFlag=false;
 		try {
-		GetVolumeDiscountRequestResultResponse r=call.getVolumeDiscountRequestResult(request);		
+		GetVolumeDiscountRequestResultResponse r=call.getVolumeDiscountRequestResult(request);
 		}catch(NeweggException e) {
 			Errors err=e.genErors();
 			err.getError().forEach( o ->{
@@ -158,6 +158,8 @@ public class ItemCallTest {
 			assertFlag=err.getError().size()>0? true:false;
 		}
 		assertTrue(assertFlag);
-		
+
 	}
+
+	public static void main(String[] args) { {System.out.println("MainClass");} }
 }

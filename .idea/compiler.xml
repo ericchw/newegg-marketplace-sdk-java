@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sdk-common" />
+        <module name="sdk-order" />
+        <module name="sdk-shipping" />
+        <module name="sdk-other" />
+        <module name="sdk-sbn" />
+        <module name="sdk-rma" />
+        <module name="sdk-datafeed" />
+        <module name="sdk-report" />
+        <module name="sdk-seller" />
+        <module name="sdk-item" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
